@@ -86,7 +86,6 @@ class _CalculadoraPageState extends State<CalculadoraPage> {
                         Botao(
                           conteudo: 'C',
                           cor: Colors.red,
-                          B
                         ),
                         Botao(
                           conteudo: '<',

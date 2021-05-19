@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Botao extends StatelessWidget {
   final String conteudo;
-  Color cor;
+  var cor;
   Botao({required this.conteudo, this.cor});
 
   @override
