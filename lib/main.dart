@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:supcal/view/Calculadora.Page.dart';
+import 'package:supcal/view/home.Page.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CalculadoraPage(),
+      home: HomePage(),
     );
   }
 }
