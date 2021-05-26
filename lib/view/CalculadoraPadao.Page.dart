@@ -11,14 +11,55 @@ class _CalculadoraPadaoPageState extends State<CalculadoraPadaoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color: Colors.white,
         child: Column(
           children: [
             Container(
-              color: Colors.black12,
-              height: MediaQuery.of(context).size.height / 2 - 100,
-              child: Center(
-                child: Text("Visor"),
+              padding: EdgeInsets.only(
+                right: 30,
               ),
+              height: MediaQuery.of(context).size.height / 2 - 100,
+              child: Column(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2 / 2 - 50,
+                    width: double.infinity,
+                    //color: Colors.red,
+                    child: Text("History .."),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2 / 2 - 50,
+                    width: double.infinity,
+                    //color: Colors.amber,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            "1234567897",
+                            style: TextStyle(
+                              fontSize: 60,
+                              color: Colors.black45,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "0",
+                          style: TextStyle(
+                            fontSize: 75,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 25, right: 25),
+              height: 0.3,
+              color: Colors.black45,
             ),
             Container(
               //height: MediaQuery.of(context).size.height / 2,

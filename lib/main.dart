@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:supcal/view/home.Page.dart';
+import 'package:supcal/view/Home.Page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'SupCal',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: HomePage(),
     );

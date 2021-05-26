@@ -18,7 +18,7 @@ class Botao extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 4,
       height: MediaQuery.of(context).size.width / 5,
       child: InkWell(
-        onTap: () => print(""),
+        onTap: () => print("${conteudo}"),
         child: Container(
           decoration: new BoxDecoration(
             shape: BoxShape.circle,

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'CalculadoraPadao.Page.dart';
+import 'Informacoes.Page.dart';
 import 'ListaCalculadora.Page.dart';
+import 'ListaCalculadoraApi.Page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -11,10 +13,12 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.white,
           toolbarHeight: AppBar().preferredSize.height,
           bottom: TabBar(
-            //indicatorColor: Colors.transparent,
+            indicatorColor: Colors.transparent,
+            labelColor: Theme.of(context).accentColor,
+            unselectedLabelColor: Colors.black54,
             tabs: [
               Tab(
                 child: Align(
@@ -22,7 +26,7 @@ class HomePage extends StatelessWidget {
                   child: Icon(
                     Icons.calculate_outlined,
                     size: 30,
-                    color: Theme.of(context).accentColor,
+                    //color: ,
                   ),
                 ),
               ),
@@ -32,7 +36,6 @@ class HomePage extends StatelessWidget {
                   child: Icon(
                     Icons.table_view_outlined,
                     size: 30,
-                    color: Theme.of(context).accentColor,
                   ),
                 ),
               ),
@@ -42,7 +45,6 @@ class HomePage extends StatelessWidget {
                   child: Icon(
                     Icons.view_in_ar_outlined,
                     size: 30,
-                    color: Theme.of(context).accentColor,
                   ),
                 ),
               ),
@@ -52,7 +54,7 @@ class HomePage extends StatelessWidget {
                   child: Icon(
                     Icons.more_vert,
                     size: 30,
-                    color: Theme.of(context).accentColor,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -63,8 +65,8 @@ class HomePage extends StatelessWidget {
           children: [
             CalculadoraPadaoPage(),
             ListaCalculadoraPage(),
-            Text("3"),
-            Text("4"),
+            ListaCalculadoraApiPage(),
+            InformacoesPage(),
           ],
         ),
       ),
