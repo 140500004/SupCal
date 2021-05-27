@@ -21,41 +21,29 @@ class HomePage extends StatelessWidget {
             unselectedLabelColor: Colors.black54,
             tabs: [
               Tab(
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Icon(
-                    Icons.calculate_outlined,
-                    size: 30,
-                    //color: ,
-                  ),
+                child: Icon(
+                  Icons.calculate_outlined,
+                  size: 30,
                 ),
               ),
               Tab(
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Icon(
-                    Icons.table_view_outlined,
-                    size: 30,
-                  ),
+                child: Icon(
+                  Icons.table_view_outlined,
+                  size: 30,
                 ),
               ),
               Tab(
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Icon(
-                    Icons.view_in_ar_outlined,
-                    size: 30,
-                  ),
+                child: Icon(
+                  Icons.view_in_ar_outlined,
+                  size: 30,
                 ),
               ),
               Tab(
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Icon(
-                    Icons.more_vert,
-                    size: 30,
-                    color: Colors.black,
-                  ),
+                child: Icon(
+                  Icons.info_outline,
+                  //Icons.more_vert,
+                  size: 30,
+                  color: Colors.black,
                 ),
               ),
             ],

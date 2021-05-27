@@ -24,8 +24,21 @@ class _CalculadoraPadaoPageState extends State<CalculadoraPadaoPage> {
                   Container(
                     height: MediaQuery.of(context).size.height / 2 / 2 - 50,
                     width: double.infinity,
-                    //color: Colors.red,
-                    child: Text("History .."),
+                    //color: Colors.amber,
+                    child: ListView(
+                      padding: EdgeInsets.only(top: 125),
+                      shrinkWrap: true,
+                      children: [
+                        Text(
+                          "0",
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                            fontSize: 40,
+                            color: Colors.black26,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height / 2 / 2 - 50,
@@ -37,7 +50,7 @@ class _CalculadoraPadaoPageState extends State<CalculadoraPadaoPage> {
                       children: [
                         Expanded(
                           child: Text(
-                            "1234567897",
+                            "1+1",
                             style: TextStyle(
                               fontSize: 60,
                               color: Colors.black45,
@@ -45,7 +58,7 @@ class _CalculadoraPadaoPageState extends State<CalculadoraPadaoPage> {
                           ),
                         ),
                         Text(
-                          "0",
+                          "2",
                           style: TextStyle(
                             fontSize: 75,
                           ),
