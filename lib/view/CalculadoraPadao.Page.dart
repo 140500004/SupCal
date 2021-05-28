@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supcal/controller/CalculadoraPadraoController.dart';
 import 'package:supcal/widget/Botao.dart';
 
 class CalculadoraPadaoPage extends StatefulWidget {
@@ -7,6 +8,8 @@ class CalculadoraPadaoPage extends StatefulWidget {
 }
 
 class _CalculadoraPadaoPageState extends State<CalculadoraPadaoPage> {
+  final controller = CalculadoraPadraoController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
