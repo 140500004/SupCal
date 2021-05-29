@@ -6,7 +6,7 @@ class ControllerCalculadoraPadrao = _ControllerCalculadoraPadraoBase
 
 abstract class _ControllerCalculadoraPadraoBase with Store {
   @observable
-  ObservableList<String> valores = [].asObservable();
+  var valores = ObservableList<String> = [];
   @observable
   var resultado = 0;
 
