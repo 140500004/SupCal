@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'CalculadoraPadao.Page.dart';
+import 'CalculadoraPadrao.Page.dart';
 import 'Informacoes.Page.dart';
 import 'ListaCalculadora.Page.dart';
 import 'ListaCalculadoraApi.Page.dart';
@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            CalculadoraPadaoPage(),
+            CalculadoraPadraoPage(),
             ListaCalculadoraPage(),
             ListaCalculadoraApiPage(),
             InformacoesPage(),
