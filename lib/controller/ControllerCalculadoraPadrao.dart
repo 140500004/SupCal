@@ -6,9 +6,11 @@ class ControllerCalculadoraPadrao = _ControllerCalculadoraPadraoBase
 
 abstract class _ControllerCalculadoraPadraoBase with Store {
   @observable
-  var valores = ObservableList<String> = [];
+  ObservableList<dynamic> valores = [].asObservable();
+  //List<String> valor = [];
+
   @observable
-  var resultado = 0;
+  dynamic resultado = 0;
 
   @action
   mostraResultado() {
@@ -23,6 +25,6 @@ abstract class _ControllerCalculadoraPadraoBase with Store {
   */
 
   fazerCalculor() {
-    return 0;
+    return '0';
   }
 }

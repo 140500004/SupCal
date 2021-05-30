@@ -55,7 +55,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                         Expanded(
                           child: Observer(
                             builder: (_) => Text(
-                              "${controller.resultado == 0 ? '' : '${controller.valores.join('')}'}",
+                              "${controller.valores.length == 0 ? '' : '${controller.valores.join('')}'}",
                               style: TextStyle(
                                 fontSize: controller.valores.length < 9
                                     ? 60
@@ -69,7 +69,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                         ),
                         Observer(
                           builder: (_) => Text(
-                            "${controller.resultado}",
+                            "${controller.resultado.toString()}",
                             style: TextStyle(
                               fontSize: 75,
                             ),
@@ -94,7 +94,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                     children: [
                       InkWell(
                         onTap: () {
-                          controller.valores = [];
+                          controller.valores.clear();
                           controller.resultado = 0;
                         },
                         child: Botao(
@@ -107,10 +107,9 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                           if (controller.valores.length > 0) {
                             controller.valores.removeLast();
                           } else {
-                            controller.valores = [];
+                            controller.valores.clear();
                             controller.resultado = 0;
                           }
-                          controller.valores = controller.valores;
                         },
                         child: Botao(
                           conteudo: '⌫',
@@ -141,7 +140,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                     children: [
                       InkWell(
                         onTap: () {
-                          controller.valores.add('7');
+                          controller.valores.add(7);
                         },
                         child: Botao(
                           conteudo: '7',
@@ -149,7 +148,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.valores.add('8');
+                          controller.valores.add(8);
                         },
                         child: Botao(
                           conteudo: '8',
@@ -157,7 +156,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.valores.add('9');
+                          controller.valores.add(9);
                         },
                         child: Botao(
                           conteudo: '9',
@@ -178,7 +177,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                     children: [
                       InkWell(
                         onTap: () {
-                          controller.valores.add('4');
+                          controller.valores.add(4);
                         },
                         child: Botao(
                           conteudo: '4',
@@ -186,7 +185,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.valores.add('5');
+                          controller.valores.add(5);
                         },
                         child: Botao(
                           conteudo: '5',
@@ -194,7 +193,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.valores.add('6');
+                          controller.valores.add(6);
                         },
                         child: Botao(
                           conteudo: '6',
@@ -215,7 +214,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                     children: [
                       InkWell(
                         onTap: () {
-                          controller.valores.add('1');
+                          controller.valores.add(1);
                         },
                         child: Botao(
                           conteudo: '1',
@@ -223,7 +222,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.valores.add('2');
+                          controller.valores.add(2);
                         },
                         child: Botao(
                           conteudo: '2',
@@ -231,7 +230,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.valores.add('3');
+                          controller.valores.add(3);
                         },
                         child: Botao(
                           conteudo: '3',
@@ -259,7 +258,7 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.valores.add('0');
+                          controller.valores.add(0);
                         },
                         child: Botao(
                           conteudo: '0',
@@ -275,7 +274,18 @@ class _CalculadoraPadraoPageState extends State<CalculadoraPadraoPage> {
                       ),
                       InkWell(
                         onTap: () {
-                          controller.resultado = 50;
+                          // Primeiro elemento
+                          if (controller.valores.length == 1) {
+                            controller.resultado = "=${controller.valores[0]}";
+                          }
+
+                          var aux = 0;
+                          controller.valores.forEach((element) {
+                            if (controller.valores.runtimeType == "String") {
+                            } else {
+                              controller.resultado += element;
+                            }
+                          });
                         },
                         child: Botao(
                           conteudo: '=',

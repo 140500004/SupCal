@@ -12,13 +12,13 @@ mixin _$ControllerCalculadoraPadrao on _ControllerCalculadoraPadraoBase, Store {
   final _$valoresAtom = Atom(name: '_ControllerCalculadoraPadraoBase.valores');
 
   @override
-  ObservableList<String> get valores {
+  ObservableList<dynamic> get valores {
     _$valoresAtom.reportRead();
     return super.valores;
   }
 
   @override
-  set valores(ObservableList<String> value) {
+  set valores(ObservableList<dynamic> value) {
     _$valoresAtom.reportWrite(value, super.valores, () {
       super.valores = value;
     });
@@ -28,13 +28,13 @@ mixin _$ControllerCalculadoraPadrao on _ControllerCalculadoraPadraoBase, Store {
       Atom(name: '_ControllerCalculadoraPadraoBase.resultado');
 
   @override
-  int get resultado {
+  dynamic get resultado {
     _$resultadoAtom.reportRead();
     return super.resultado;
   }
 
   @override
-  set resultado(int value) {
+  set resultado(dynamic value) {
     _$resultadoAtom.reportWrite(value, super.resultado, () {
       super.resultado = value;
     });
